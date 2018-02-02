@@ -38,7 +38,7 @@ class Client
     }
 
     /**
-     * Get API URL
+     * Set API URL
      *
      * @return string
      */
