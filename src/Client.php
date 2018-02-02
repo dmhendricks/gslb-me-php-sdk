@@ -4,7 +4,7 @@ namespace CloudVerve\GslbMe;
 class Client
 {
     protected $accountEmail;
-    protected $authKey;
+    protected $auth;
     protected $client;
     protected $zone;
     protected $headers;
@@ -20,10 +20,9 @@ class Client
     {
 
         $this->accountEmail = $accountEmail;
-        $this->authKey     = base64_encode( $accountEmail . ':' . $accountPassword );
+        $this->auth         = [ 'auth' => [ $accountEmail, $accountPassword ] ];
         $this->zone         = $zone;
         $this->client       = new GuzzleHttp\Client();
-        $this->headers      = [ 'headers' => [ 'Authorization' => 'Basic ' . $this->authKey ] ];
 
     }
 
