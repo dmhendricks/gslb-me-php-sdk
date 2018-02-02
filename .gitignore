@@ -1,0 +1,16 @@
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+*.un~
+
+# Development #
+###############
+node_modules/
+vendor/
+yarn.lock
+composer.lock
+package-lock.json
