@@ -11,7 +11,10 @@ class Zone extends Client
    */
   public function get()
   {
-    $this->zone;
+
+    $endpoint = $this->apiUrl . 'zone/' . $this->zone;
+    return $this->client->request( 'GET', $endpoint, $this->auth );
+
   }
 
   /**
