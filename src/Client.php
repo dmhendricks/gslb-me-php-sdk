@@ -7,7 +7,8 @@ class Client
     protected $authKey;
     protected $client;
     protected $zone;
-    protected $apiUrl = 'https://api.gslb.me';
+    protected $headers;
+    protected $apiUrl = 'https://api.gslb.me/';
 
     /**
      * Client constructor. Accepts the account e-mail and password.
@@ -19,9 +20,10 @@ class Client
     {
 
         $this->accountEmail = $accountEmail;
-        $this->$authKey     = base64_encode( $accountEmail . ':' . $accountPassword );
+        $this->authKey     = base64_encode( $accountEmail . ':' . $accountPassword );
         $this->zone         = $zone;
         $this->client       = new GuzzleHttp\Client();
+        $this->headers      = [ 'headers' => [ 'Authorization' => 'Basic ' . $this->authKey ] ];
 
     }
 
@@ -45,7 +47,18 @@ class Client
     public function setApiUrl( $url )
     {
 
-      $this->apiUrl = $url;
+      $this->apiUrl = $this->addTrailingSlash( $url );
+
+    }
+
+    /**
+     * Add a trailing slash to a URL
+     *
+     * @return string
+     */
+    private function addTrailingSlash( $url ) {
+
+      return trim( $url, '/' ) . '/';
 
     }
 
