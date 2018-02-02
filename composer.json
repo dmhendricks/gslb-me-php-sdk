@@ -1,6 +1,6 @@
 {
   "name": "dmhendricks/gslb-me-php-sdk",
-  "description": "A PHP SDK to manage GSLB.me DNS zones and records",
+  "description": "A basic PHP SDK to manage GSLB.me DNS zones and records",
   "license": "Apache-2.0",
   "homepage": "https://github.com/dmhendricks/gslb-me-php-sdk",
   "authors": [
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GslbMeSdk\\": "src/"
+      "CloudVerve\\GslbMe\\": "src/"
     }
   }
 }
