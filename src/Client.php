@@ -22,7 +22,7 @@ class Client
         $this->accountEmail = $accountEmail;
         $this->auth         = [ 'auth' => [ $accountEmail, $accountPassword ] ];
         $this->zone         = $zone;
-        $this->client       = new GuzzleHttp\Client();
+        $this->client       = new \GuzzleHttp\Client();
 
     }
 

@@ -13,7 +13,7 @@ class Zone extends Client
   {
 
     $endpoint = $this->apiUrl . 'zone/' . $this->zone;
-    return $this->client->request( 'GET', $endpoint, $this->auth );
+    return $this->client->request( 'GET', $endpoint, $this->auth )->getBody()->getContents();
 
   }
 
