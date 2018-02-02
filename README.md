@@ -6,6 +6,6 @@
 
 # GSLB.me PHP SDK
 
-A PHP SDK for the [GSLB.me](https://www.gslb.me/) hosted DNS [API](https://www.gslb.me/api/).
+A PHP wrapper for the [GSLB.me](https://www.gslb.me/) [API](https://www.gslb.me/api/).
 
-**Status**: Under development
+**Status**: Under development, does not work.
